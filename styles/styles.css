@@ -1,0 +1,16 @@
+html {
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+}
+
+body header nav ol {
+    background-color: aquamarine;
+}
