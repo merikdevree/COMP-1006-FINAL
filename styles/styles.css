@@ -1,6 +1,13 @@
 html {
-    background-color: #37013b;
-}
+    overflow: hidden;
+    background-image: url(/assets/Galaxy.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%; 
+  }
+  
+  
+
 
 header {
     width: 100%;
