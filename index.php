@@ -20,48 +20,14 @@
         <nav>
             <ol>
                 <li><a href="index.php">Home</a></li>
-                <li><a onclick="showForm()">Login</a></li>
+                <li><a href="login.php">Login</a></li>
                 <li><a href="users.php">Users</a></li>
                 <li><a href="about.php">About</a></li>
             </ol>
         </nav>
     </header>
     <main>
-    <div id="overlay"></div>
-    <div id="form-container">
-        <button id="x" onclick="hideForm()">X</button>
-
-        <form method="post">
-            <form id="login-form">
-
-
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Password:</label>
-                <input type="text" id="password" name="password" required>
-
-
-                <div>
-                    <input type="submit" value="Login">
-
-                    <?php
-                    require_once('database.php');
-                    $database = new Database(); // creates a new database
-                    if (isset($_POST) && !empty($_POST)) {
-                        $username = $_POST['username'];
-                        $password = $_POST['password'];
-                        $res = $database->create($username, $password);
-                        if ($res) {
-                            echo "<p>Thank you for logging in!</p>";
-                        } else {
-                            echo "<p>Oops something went wrong! Please try again.</p>";
-                        }
-                    }
-                    ?>
-                </div>
-
-            </form>
+    
         <p>
             The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting
             where it is from where it isn't, or where it isn't from where it is - whichever is greater - it obtains a

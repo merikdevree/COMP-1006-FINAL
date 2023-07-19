@@ -22,41 +22,7 @@
     </header>
 
     <main>
-    <div id="overlay"></div>
-    <div id="form-container">
-        <button id="x" onclick="hideForm()">X</button>
-
-        <form method="post">
-            <form id="login-form">
-
-
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Password:</label>
-                <input type="text" id="password" name="password" required>
-
-
-                <div>
-                    <input type="submit" value="Login">
-
-                    <?php
-                    require_once('database.php');
-                    $database = new Database(); // creates a new database
-                    if (isset($_POST) && !empty($_POST)) {
-                        $username = $_POST['username'];
-                        $password = $_POST['password'];
-                        $res = $database->create($username, $password);
-                        if ($res) {
-                            echo "<p>Thank you for logging in!</p>";
-                        } else {
-                            echo "<p>Oops something went wrong! Please try again.</p>";
-                        }
-                    }
-                    ?>
-                </div>
-
-            </form>
+    
         <h1>Users</h1>
         <table>
             <th>ID</th>
