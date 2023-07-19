@@ -12,10 +12,10 @@
     <header>
         <nav>
             <ol>
-                <li><a>Home</a></li>
-                <li><a>Login</a></li>
-                <li><a>Users</a></li>
-                <li><a>About</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="about.php">About</a></li>
             </ol>
         </nav>
     </header>
@@ -25,7 +25,7 @@
         <form method="post">
             <form id="login-form">
 
-                
+
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
 
@@ -37,24 +37,27 @@
                     <input type="submit" value="Login">
 
                     <?php
-                    require_once ('database.php');
+                    require_once('database.php');
                     $database = new Database(); // creates a new database
                     if (isset($_POST) && !empty($_POST)) {
                         $username = $_POST['username'];
                         $password = $_POST['password'];
                         $res = $database->create($username, $password);
-                        if($res){
+                        if ($res) {
                             echo "<p>Thank you for logging in!</p>";
+                        } else {
+                            echo "<p>Oops something went wrong! Please try again.</p>";
                         }
-                        else{
-                             echo "<p>Oops something went wrong! Please try again.</p>";
                     }
-                }
                     ?>
                 </div>
 
             </form>
     </div>
+
+    <footer>
+        <p>copyright i guess</p>
+    </footer>
 </body>
 
 </html>
