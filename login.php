@@ -14,14 +14,15 @@
         <nav>
             <ol>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a onclick="showForm()">Login</a></li>
                 <li><a href="users.php">Users</a></li>
                 <li><a href="about.php">About</a></li>
             </ol>
         </nav>
     </header>
-
+    <div id="overlay"></div>
     <div id="form-container">
+        <button id="x" onclick="hideForm()">X</button>
 
         <form method="post">
             <form id="login-form">

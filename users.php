@@ -22,6 +22,7 @@
     </header>
 
     <main>
+    <div id="overlay"></div>
     <div id="form-container">
         <button id="x" onclick="hideForm()">X</button>
 
