@@ -35,6 +35,9 @@
             </tr>
         </table>
     </main>
+    <footer>
+        <p>copyright i guess</p>
+    </footer>
 </body>
 
 </html>

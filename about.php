@@ -20,6 +20,9 @@
             </ol>
         </nav>
     </header>
+    <footer>
+        <p>copyright i guess</p>
+    </footer>
 </body>
 
 </html>

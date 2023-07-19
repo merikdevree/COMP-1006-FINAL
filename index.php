@@ -38,6 +38,10 @@
             the deviation and its variation, which is called error.
         </p>
     </main>
+
+    <footer>
+        <p>copyright i guess</p>
+    </footer>
 </body>
 
 </html>
