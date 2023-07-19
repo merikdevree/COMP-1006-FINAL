@@ -2,10 +2,10 @@
 // creates a database for the registered users
 class Database
 {
-    private $host = "";
-    private $db_name = "";
-    private $username = "";
-    private $password = "";
+    private $host = "172.31.22.43";
+    private $db_name = "Merik200462061";
+    private $username = "Merik200462061";
+    private $password = "hXxnH697ga";
     public $conn;
 
     public function __construct()
