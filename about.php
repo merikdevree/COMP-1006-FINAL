@@ -12,10 +12,10 @@
         <header>
             <nav>
                 <ol>
-                    <li><a>Home</a></li>
-                    <li><a>Login</a></li>
-                    <li><a>Users</a></li>
-                    <li><a>About</a></li>
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Users</a></li>
+                <li><a>Login</a></li>
                 </ol>
             </nav>
         </header>
