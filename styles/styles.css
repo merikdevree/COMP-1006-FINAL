@@ -8,7 +8,13 @@ body {
 header {
     width: 100%;
     padding: 45px;
+<<<<<<< HEAD
     background: linear-gradient(to right, #6a00ff, #9c27b0);
+=======
+    background-color: rgb(141, 0, 0);
+    background-repeat: repeat;
+    background-size: cover;
+>>>>>>> 30d7fa738571198f2f698d5ff792a78d2f36b820
 }
 
 ol {
@@ -28,7 +34,7 @@ header nav ol {
 }
 
 header nav ol li a {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 1.2em;
     color: aliceblue;
 }
