@@ -12,14 +12,29 @@
     <header>
         <nav>
             <ol>
-                <li><a>Home</a></li>
-                <li><a>Login</a></li>
-                <li><a>Users</a></li>
-                <li><a>About</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="about.php">About</a></li>
             </ol>
         </nav>
     </header>
 
+    <main>
+        <h1>Users</h1>
+        <table>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+            <!-- TODO: add php here -->
+            <tr>
+                <!-- Example data -->
+                <td>1</td>
+                <td>Merik</td>
+                <td>123</td>
+            </tr>
+        </table>
+    </main>
 </body>
 
 </html>

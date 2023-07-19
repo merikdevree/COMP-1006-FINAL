@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Home</title>
-    
+
 </head>
 
 <body>
     <header>
         <nav>
             <ol>
-                <li><a>Home</a></li>
-                <li><a>Login</a></li>
-                <li><a>Users</a></li>
-                <li><a>About</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="about.php">About</a></li>
             </ol>
         </nav>
     </header>
