@@ -18,13 +18,28 @@
         <nav>
             <ol>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="login.php">Login</a></li>
                 <li><a href="users.php">Users</a></li>
                 <li><a href="about.php">About</a></li>
             </ol>
         </nav>
     </header>
     <main>
+        <button class="open-button" onclick="openForm()">Login</button>
+
+        <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+
+    <label for="email"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="Username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+        <script src="form.js"></script>
         <p>
             The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting
             where it is from where it isn't, or where it isn't from where it is - whichever is greater - it obtains a
