@@ -41,6 +41,16 @@
             differentiating this from the algebraic sum of where it shouldn't be and where it was, it is able to obtain
             the deviation and its variation, which is called error.
         </p>
+        <p>
+            Light Yagami was born on February 28, 1986 (or 1989 in the anime). He is portrayed as a teen genius and 
+            a model student with a polite, reserved, and gentleman-like personality, who is well-liked and popular among 
+            his peers and teachers and known for being the class topper.[11][12] At the beginning of the story, Light is
+            a student in his last year of high school; he later attends To-Oh University (東応大学, Tōō Daigaku). His father,
+            Soichiro Yagami, is the chief of the National Police Agency, and is the head of the task force hunting for "Kira"
+            , the name the public has given to the perpetrator of a string of inexplicable murders around the world. His 
+            mother, Sachiko, is a housewife. His younger sister, Sayu, acts as a cheerful, less academic foil of Light himself.
+        </p>
+        
     </main>
 
     <footer>

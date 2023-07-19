@@ -1,14 +1,15 @@
 html {
-    background-color: rgb(235, 234, 234);
+    background-color: #37013b;
 }
 
 body {
+    
 }
 
 header {
     width: 100%;
     padding: 45px;
-    background: linear-gradient(to right, #6a00ff, #9c27b0);
+    background: linear-gradient(to right, #006466,#065a60,#0b525b,#144552,#1b3a4b,#212f45,#272640,#312244,#3e1f47,#4d194d);
 }
 
 ol {
@@ -46,14 +47,29 @@ body header nav ol li:nth-of-type(2) {
     margin-left: auto;
 }
 
+main {
+    display: flex;
+}
+
 main p {
-    background-color: rgb(39, 4, 39);
+    background-color: #4d194d;
     color: aliceblue;
     margin: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: solid 2px rgb(39, 4, 39);
+    border: solid 2px #4d194d;
     border-radius: 10px;
     font-family: 'Raleway', sans-serif;
     font-size: 1.5em;
+}
+
+footer { 
+    color: #238991;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
 }
