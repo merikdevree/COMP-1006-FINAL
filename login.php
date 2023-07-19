@@ -22,7 +22,7 @@
     <div id="form-container">
 
         <form method="post">
-            <form id="pizza-form">
+            <form id="login-form">
 
                 
                 <label for="username">Username:</label>
@@ -43,10 +43,10 @@
                         $password = $_POST['password'];
                         $res = $database->create($username, $password);
                         if($res){
-                            echo "<p>Thank you for your order!</p>";
+                            echo "<p>Thank you for logging in!</p>";
                         }
                         else{
-                             echo "<p>Oops something went wrong! Please try again</p>";
+                             echo "<p>Oops something went wrong! Please try again.</p>";
                     }
                 }
                     ?>
