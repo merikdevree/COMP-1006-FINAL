@@ -11,6 +11,7 @@
 
 <body>
     <header>
+    <img href="index.php" src="/assets/shark.png" alt="Logo">
         <nav>
             <ol>
                 <li><a href="index.php">Home</a></li>

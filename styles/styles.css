@@ -1,11 +1,22 @@
 html {
-    background-color: #37013b;
+    background-color: #2a022e;
 }
 
 header {
+    border-radius: 5px;
     width: 100%;
     padding: 45px;
+    border: solid 1px black;
     background: linear-gradient(to right, #006466,#065a60,#0b525b,#144552,#1b3a4b,#212f45,#272640,#312244,#3e1f47,#4d194d);
+}
+
+img {
+    height: 50px;
+    width: 100px;
+    float: left;
+    position: absolute;
+    transform: translate(-30px,-5px);
+    cursor: pointer;
 }
 
 ol {
@@ -51,45 +62,42 @@ b {
     font-size: 1.2em;
     border-radius: 10px;
     color: white;
-    background-color:#238991;
+    background-color:#222222;
     font-family: "Raleway", sans-serif;
     padding: 10px 20px 10px 20px;
     margin: 10px
 }
 
-.open-button:hover {
-    size-adjust: 110%;
-}
 
 .form-popup {
     display: none;
     position: fixed;
-    bottom: 15;
-    left: 15px;
+    top: 116px;
+    left: 8px;
     border: 3px solid #f1f1f1;
     z-index: 9;
-  }
+}
 
-  .form-container {
+.form-container {
     max-width: 300px;
     padding: 10px;
     background-color: white;
-  }
+}
 
-  .form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text], .form-container input[type=password] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
     background: #202020;
-  }
+}
   
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
-  }
+}
 
-  .form-container .btn {
+.form-container .btn {
     background-color: #238991;
     color: white;
     padding: 16px 20px;
@@ -98,21 +106,22 @@ b {
     width: 100%;
     margin-bottom:10px;
     opacity: 0.8;
-  }
+}
 
-  .form-container .cancel {
+.form-container .cancel {
     background-color: #4d194d;
-  }
+}
 
-  .form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover, .open-button:hover {
     opacity: 1;
-  }
+}
+
 
 main p {
     background-color: #4d194d;
     color: aliceblue;
     margin: 10px;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 10px;
     border: solid 2px #4d194d;
     border-radius: 10px;
@@ -124,9 +133,10 @@ footer {
     color: #238991;
     display: flex;
     position: absolute;
-    bottom: 0;
     width: 100%;
     padding: 20px;
     justify-content: center;
     font-family: "Raleway", sans-serif;
 }
+
+

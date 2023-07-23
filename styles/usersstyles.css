@@ -1,0 +1,31 @@
+table {
+    width: 500px;
+    color: aliceblue;
+    border: 1px solid black;
+}
+
+.table-wrapper{
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    padding: 100px;
+    font-family: 'Raleway', sans-serif;
+}
+
+main h1 {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    font-size: 1.3em;
+    font-family: 'Raleway', sans-serif;
+}
+
+th {
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+footer {
+    bottom: 0;
+}

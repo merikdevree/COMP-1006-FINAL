@@ -1,7 +1,4 @@
-<?php
-include 'database.php';
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +16,7 @@ include 'database.php';
 
 <body>
     <header>
+    <img href="index.php" src="/assets/shark.png" alt="Logo">
         <nav>
             <ol>
                 <li><a href="index.php">Home</a></li>
@@ -68,6 +66,14 @@ include 'database.php';
             Soichiro Yagami, is the chief of the National Police Agency, and is the head of the task force hunting for "Kira"
             , the name the public has given to the perpetrator of a string of inexplicable murders around the world. His 
             mother, Sachiko, is a housewife. His younger sister, Sayu, acts as a cheerful, less academic foil of Light himself.
+        </p>
+
+        <p>
+            In the deep blue abyss of the sea, where the sun's rays dare not penetrate, there lies an Eldritch Horror, a nightmare 
+            born of ancient terrors. Its colossal form defies comprehension, a grotesque amalgamation of tentacles and eyes, oozing 
+            iridescent phosphorescence that paints the surrounding waters with an eerie glow. Unfathomable and alien, it drifts through
+            the depths like a spectral specter, whispering madness into the minds of those who dare to glimpse its hideous visage, a 
+            living enigma from a realm beyond human understanding.
         </p>
         
     </main>
