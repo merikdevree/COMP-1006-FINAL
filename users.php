@@ -22,21 +22,6 @@
         </nav>
     </header>
 
-    <button class="open-button" onclick="openForm()">Login</button>
-
-        <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="Username" required>
-
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="Password" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-
     <main>
         <h1>Users</h1>
         <div class="table-wrapper">
