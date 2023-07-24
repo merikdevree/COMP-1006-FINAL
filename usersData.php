@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) == 1) {
     // The login is successful, store user data in a session
     session_start();
     $_SESSION['username'] = $username;
-    header("Location: users.php"); // Redirect to the users page
+    header("Location: index.php"); // Redirect to the users page
 } else {
     echo "Invalid username or password. Please try again.";
 }
