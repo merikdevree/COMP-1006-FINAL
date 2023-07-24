@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/usersstyles.css">
+    <script src="/javascript/form.js"></script>
     <title>Users</title>
 </head>
 
@@ -21,8 +22,25 @@
             </ol>
         </nav>
     </header>
+    
+    <button class="open-button" onclick="openForm()">Login</button>
+
+    <div class="form-popup" id="myForm">
+        <form action="login.php" method="post" class="form-container">
+
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="Username" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="Password" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
 
     <main>
+        
         <h1>Users</h1>
         <div class="table-wrapper">
         <table>

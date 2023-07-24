@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="/javascript/form.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
@@ -29,19 +30,19 @@
         <button class="open-button" onclick="openForm()">Login</button>
 
         <div class="form-popup" id="myForm">
-  <form action="login.php" method="post" class="form-container">
+            <form action="login.php" method="post" class="form-container">
 
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="Username" required>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="Username" required>
 
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="Password" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="Password" required>
 
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
-        <script src="form.js"></script>
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+        
         <p>
             The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting
             where it is from where it isn't, or where it isn't from where it is - whichever is greater - it obtains a
