@@ -15,7 +15,6 @@
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
     </div>
-    <script src="form.js"></script>
     <p>
         The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting
         where it is from where it isn't, or where it isn't from where it is - whichever is greater - it obtains a
