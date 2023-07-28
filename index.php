@@ -1,19 +1,6 @@
 <?php include 'includes/header.php'; ?>
 <main>
-    <button class="open-button" onclick="openForm()">Login</button>
-
-    <div class="form-popup" id="myForm">
-        <form action="login.php" method="post" class="form-container">
-
-            <label for="username"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="Username" required>
-
-            <label for="password"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="Password" required>
-
-            <button type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
+    
     </div>
     <script src="form.js"></script>
     <p>
