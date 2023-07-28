@@ -59,13 +59,11 @@ body header nav ol li {
     cursor: pointer;
 }
 
-
-
-
 b {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
+
 .open-button {
     cursor: pointer;
     opacity: 0.8;
@@ -77,7 +75,6 @@ b {
     padding: 10px 20px 10px 20px;
     margin: 10px
 }
-
 
 .form-popup {
     display: none;

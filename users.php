@@ -1,3 +1,5 @@
+<?php include 'includes/header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,16 +13,7 @@
 </head>
 
 <body>
-    <header>
-    <img href="index.php" src="/assets/shark.png" alt="Logo">
-        <nav>
-            <ol>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="users.php">Users</a></li>
-                <li><a href="about.php">About</a></li>
-            </ol>
-        </nav>
-    </header>
+    
 
     <main>
         <h1>Users</h1>
@@ -39,9 +32,6 @@
         </table>
         </div>
     </main>
-    <footer>
-        <p>copyright i guess</p>
-    </footer>
 </body>
-
+<?php include 'includes/footer.php'; ?>
 </html>
