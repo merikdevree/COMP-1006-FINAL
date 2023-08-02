@@ -3,27 +3,31 @@ if (isset($_POST['submit'])) {
     // include the database connection
     require_once 'database.php';
     // get the data from the form
-    $username = $_POST['uname'];
+    $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['pwd'];
-    $passwordConfirm = $_POST['pwdConfirm'];
+    $password = $_POST['password'];
+    $passwordConfirm = $_POST['passwordConfirm'];
+
+
     // validate the data
-    if (empty($username)) {
-        header("Location: ../signup.php?error=emptyusername");
+    if (empty($username) || empty($email) || empty($password) || empty($passwordConfirm)) {
+        header("Location: ../signup.php?error=emptyfields");
         exit();
     }
-    if (empty($email)) {
-        header("Location: ../signup.php?error=emptyemail");
-        exit();
-    }
-    if (empty($password)) {
-        header("Location: ../signup.php?error=emptypassword");
-        exit();
-    }
+
     if (empty($passwordConfirm) || $passwordConfirm != $password) {
         header("Location: ../signup.php?error=passwordmismatch");
         exit();
     }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: ../signup.php?error=invalidemail");
+        exit();
+    }
+    if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+        header("Location: ../signup.php?error=invalidusername");
+        exit();
+    }
+
     // check if the username is already taken
     $sql = "SELECT * FROM users WHERE username = '$username'";
     $result = $database->conn->query($sql);
@@ -38,10 +42,16 @@ if (isset($_POST['submit'])) {
         header("Location: ../signup.php?error=emailtaken");
         exit();
     }
+
+    //sanitize the data
+    $username = $database->conn->real_escape_string($username);
+    $email = $database->conn->real_escape_string($email);
+    $password = $database->conn->real_escape_string($password);
+
     // hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     // insert the user into the database
-    $sql = "INSERT INTO users (username, email, pwd) VALUES ('$username', '$email', '$hashedPassword')";
+    $sql = "INSERT INTO users (username, email, `password`) VALUES ('$username', '$email', '$hashedPassword')";
     $result = $database->conn->query($sql);
     if ($result) {
         header("Location: ../login.php?signup=success");
