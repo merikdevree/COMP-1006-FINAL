@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
 
     // get the data from the form
     $username = $_POST['username'];
-    $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $hashedPassword = hash('bcrypt', $_POST['password']);
     // validate the data
 
     // check if the user exists
