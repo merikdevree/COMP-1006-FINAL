@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
     $password = $database->conn->real_escape_string($password);
 
     // hash the password
-    $hashedPassword = hash('bcrypt', $password);
+    $hashedPassword = hash('sha512', $password);
     // insert the user into the database
     $sql = "INSERT INTO users (username, email, `password`) VALUES ('$username', '$email', '$hashedPassword')";
     $result = $database->conn->query($sql);
