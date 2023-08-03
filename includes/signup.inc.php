@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 
     // check if the username is already taken
     $sql = "SELECT * FROM users WHERE username = '$username'";
-    $result = $database->conn->query($sql);
+    $result = mysqli_query($conn, $sql);
     if ($result->num_rows > 0) {
         header("Location: ../signup.php?error=usernametaken");
         exit();

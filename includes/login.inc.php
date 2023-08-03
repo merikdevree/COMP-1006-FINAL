@@ -1,17 +1,17 @@
 <?php
 if (isset($_POST['submit'])) {
     // include the database connection
-    require_once 'database.php';
+    require 'database.php';
 
     // get the data from the form
     $username = $_POST['username'];
     $hashedPassword = hash('sha512', $_POST['password']);
-    // validate the data
 
     // check if the user exists
     $sql = "SELECT user_id FROM users WHERE username = '$username' AND `password` = '$hashedPassword'";
     $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) == 1) {
+    $count = $result->num_rows;
+    if ($count == 1) {
         // log the user in
         session_start();
         $_SESSION['username'] = $username;
