@@ -11,4 +11,17 @@
     </div>
 </main>
 
+<?php
+if (isset($_GET['error'])) {
+    if ($_GET['error'] == "invalid") {
+        echo "<p class='error'>Invalid username or password.</p>";
+        echo "<p>$password</p>";
+        echo "<p>$hashedPassword</p>";
+    }
+} else if (isset($_GET['login'])) {
+    if ($_GET['login'] == "success") {
+        echo "<p class='success'>You have successfully logged in.</p>";
+    }
+}
+?>
 <?php include 'includes/footer.php'; ?>
