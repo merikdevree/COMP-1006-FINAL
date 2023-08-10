@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/usersstyles.css">
-    <script src="/javascript/form.js"></script>
-    <title>Users</title>
-</head>
-
-<body>
+<?php include 'includes/header.php'; ?>
     <header>
     <img href="index.php" src="/assets/shark.png" alt="Logo">
         <nav>
@@ -38,7 +25,6 @@
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
     </div>
-
     <main>
         
         <h1>Users</h1>
@@ -57,9 +43,5 @@
         </table>
         </div>
     </main>
-    <footer>
-        <p>copyright i guess</p>
-    </footer>
 </body>
-
-</html>
+<?php include 'includes/footer.php'; ?>

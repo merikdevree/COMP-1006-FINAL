@@ -42,5 +42,4 @@
         <p>copyright i guess</p>
     </footer>
 </body>
-
 </html>

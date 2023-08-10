@@ -1,22 +1,27 @@
+<?php include 'includes/header.php'; ?>
+
+<main>
+    <div class="login-form">
+        <h2>Log In</h2>
+        <form action="includes/login.inc.php" method="post">
+            <input type="text" name="username" id="username" placeholder="Username">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button type="submit" name="submit">Log In</button>
+        </form>
+    </div>
+</main>
+
 <?php
-
-if (!$connection) {
-    die("Database connection failed: " . mysqli_connect_error());
+if (isset($_GET['error'])) {
+    if ($_GET['error'] == "invalid") {
+        echo "<p class='error'>Invalid username or password.</p>";
+        echo "<p>$password</p>";
+        echo "<p>$hashedPassword</p>";
+    }
+} else if (isset($_GET['login'])) {
+    if ($_GET['login'] == "success") {
+        echo "<p class='success'>You have successfully logged in.</p>";
+    }
 }
-
-// Sanitize user input to prevent SQL injection
-$username = mysqli_real_escape_string($connection, $_POST['username']);
-$password = mysqli_real_escape_string($connection, $_POST['password']);
-
-// Perform the database query to check if the user exists
-$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-$result = mysqli_query($connection, $query);
-
-if (mysqli_num_rows($result) == 1) {
-    // The login is successful, store user data in a session
-    session_start();
-    $_SESSION['username'] = $username;
-    header("Location: users.php"); // Redirect to the users page
-} else {
-    echo "Invalid username or password. Please try again.";
-}
+?>
+<?php include 'includes/footer.php'; ?>
