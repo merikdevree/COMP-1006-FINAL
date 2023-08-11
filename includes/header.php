@@ -19,7 +19,7 @@
 <body>
 
     <header>
-        <img href="index.php" src="/assets/shark.png" alt="Logo">
+        <img href="index.php" src="../assets/shark.png" alt="Logo">
         <nav>
 
             <ol>
