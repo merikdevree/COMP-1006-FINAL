@@ -1,32 +1,15 @@
 <?php
 if (isset($_POST['submit'])) {
-    // include the database connection
-    require_once 'database.php';
     // get the data from the form
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $passwordConfirm = $_POST['passwordConfirm'];
 
+    include "../classes/signup.class.php";
+    include "../classes/signup-validate.class.php";
 
-    // validate the data
-    if (empty($username) || empty($email) || empty($password) || empty($passwordConfirm)) {
-        header("Location: ../signup.php?error=emptyfields");
-        exit();
-    }
-
-    if (empty($passwordConfirm) || $passwordConfirm != $password) {
-        header("Location: ../signup.php?error=passwordmismatch");
-        exit();
-    }
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../signup.php?error=invalidemail");
-        exit();
-    }
-    if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-        header("Location: ../signup.php?error=invalidusername");
-        exit();
-    }
+    $signup = new SignupValidate($username, $email, $password, $passwordConfirm);
 
     // check if the username is already taken
     $sql = "SELECT * FROM users WHERE username = '$username'";
