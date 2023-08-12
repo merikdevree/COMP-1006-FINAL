@@ -26,7 +26,8 @@
                 <ul class="nav">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#">Create Post</a></li>
-                    <li><a href="about.php">About</a></li>
+                    <li><a href="users.php">Users</a></li>
+                    <li><a href="about.php">about</a></li>
                 </ul>
             </div>
             <!-- login buttons -->
