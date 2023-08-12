@@ -140,6 +140,7 @@ footer {
 
 .nav li {
     margin-left: auto;
+    font-family: "Raleway", sans-serif;;
 }
 
 .nav li a {
@@ -152,10 +153,20 @@ footer {
 }
 
 .signup a,
-.login a{
-    margin-left: auto;
+.login a {
+    margin-left: 150px;
     color: #202020;
+    font-family: "Raleway", sans-serif;
 }
+
+.signup a:hover,
+.login a:hover {
+    
+    color: #f0f0f0;
+    
+}
+
+
 
 
 
