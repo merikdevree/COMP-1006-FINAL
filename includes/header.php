@@ -19,38 +19,36 @@
 <body>
 
     <header>
-        <img href="index.php" src="/assets/shark.png" alt="Logo">
+        <img href="index.php" src="../assets/Shark.png" alt="Logo">
         <nav>
+            <div class="main-nav">
 
-            <ol>
-                <li>
-                    <div>
-                        <button class="signup">
-                            <a href="signup.php">Sign Up</a>
-                        </button>
-                        <button><a href="login.php">Log In</a></button>
-                    </div>
-                </li>
-                <li><button class="open-button" onclick="openForm()">Login</button>
-
-                    <div class="form-popup" id="myForm">
-                        <form action="login.php" method="post" class="form-container">
-
-                            <label for="username"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="Username" required>
-
-                            <label for="password"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="Password" required>
-
-                            <button type="submit" class="btn">Login</button>
-                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                        </form>
-                </li>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="users.php">Users</a></li>
-                <li><a href="about.php">About</a></li>
-            </ol>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="#">Create Post</a></li>
+                    <li><a href="about.php">about</a></li>
+                </ul>
+            </div>
             <!-- login buttons -->
-
+            <!-- dynamic login buttons if user logged in -->
+            <div class="login-buttons">
+                <ul>
+                    <?php
+                    if (isset($_SESSION['user_id'])) {
+                        ?>
+                        <li><a href="./profile.php">
+                                <?php echo $_SESSION['username']; ?>
+                            </a></li>
+                        <li><a href="includes/logout.inc.php">Log Out</a></li>
+                        <?php
+                    } else {
+                        ?>
+                        <li><a href="signup.php">Sign Up</a></li>
+                        <li><a href="login.php">Log In</a></li>
+                        <?php
+                    }
+                    ?>
+                </ul>
+            </div>
         </nav>
     </header>

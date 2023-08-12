@@ -1,7 +1,9 @@
-
-<?php include 'includes/header.php'; ?>
+<?php
+session_start();
+include 'includes/header.php';
+?>
 <main>
-    
+
     </div>
     <p>
         The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting

@@ -1,38 +1,15 @@
 <?php
 if (isset($_POST['submit'])) {
-    // include the database connection
-    require_once 'database.php';
-
     // get the data from the form
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $hashedPassword = hash('sha512', $password);
+    include "../classes/database.class.php";
+    include "../classes/login.class.php";
+    include "../classes/login-validate.class.php";
 
-    // validate the data
-    if (empty($username) || empty($password)) {
-        header("Location: ../login.php?error=emptyfields");
-        exit();
-    }
-    // check for match
-    $sql = "SELECT * FROM users WHERE username = '$username' AND `password` = '$hashedPassword'";
-    $result = $database->conn->query($sql);
+    $login = new LoginValidate($username, $password);
 
-    if ($result->num_rows == 1) {
-        // log the user in
-        session_start();
-        $_SESSION['username'] = $username;
-        header("Location: ../index.php?login=success");
-        exit();
-    } else {
-        // redirect back to the login page
-        header("Location: ../login.php?error=invalid");
-        exit();
-    }
+    $login->login();
 
-} else {
-    // redirect back to the login page
-    header("Location: ../login.php");
-    $conn->close();
-    exit();
 }
 ?>
