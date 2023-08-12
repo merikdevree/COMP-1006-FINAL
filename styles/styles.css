@@ -45,19 +45,7 @@ body header nav ol li {
     margin: auto
 }
 
-.signup {
-    background-color:#252222;
-    padding: 12px 16px 12px 16px;
-    border-radius: 10px;
-    font-family: "Raleway", sans-serif;
-    font-size: 0.8em;
-}
 
-.signup:hover {
-    background-color: #1b1919;
-    color: white;
-    cursor: pointer;
-}
 
 b {
     font-family: 'Raleway', sans-serif;
@@ -145,5 +133,47 @@ footer {
     justify-content: center;
     font-family: "Raleway", sans-serif;
 }
+
+.nav {
+    display: flex;
+}
+
+.nav li {
+    margin-left: auto;
+    font-family: "Raleway", sans-serif;;
+}
+
+.nav li a {
+    color: #dfdfdf;
+}
+
+.nav li a:hover{
+    color: #2ae4e4;
+}
+
+.login-buttons {
+    display: flex;
+    width: 100%;
+}
+
+.signup a,
+.login a {
+    margin-left: 150px;
+    color: #202020;
+    font-family: "Raleway", sans-serif;
+}
+
+.signup a:hover,
+.login a:hover {
+    color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
 
 
