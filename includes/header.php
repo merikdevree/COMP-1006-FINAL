@@ -23,7 +23,7 @@
         <nav>
             <div class="main-nav">
 
-                <ul>
+                <ul class="nav">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#">Create Post</a></li>
                     <li><a href="about.php">about</a></li>
@@ -43,7 +43,7 @@
                         <?php
                     } else {
                         ?>
-                        <li><a href="signup.php">Sign Up</a></li>
+                        <li class="signup"><a href="signup.php">Sign Up</a></li>
                         <li><a href="login.php">Log In</a></li>
                         <?php
                     }
