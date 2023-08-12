@@ -26,7 +26,7 @@
                 <ul class="nav">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#">Create Post</a></li>
-                    <li><a href="about.php">about</a></li>
+                    <li><a href="about.php">About</a></li>
                 </ul>
             </div>
             <!-- login buttons -->
@@ -44,7 +44,7 @@
                     } else {
                         ?>
                         <li class="signup"><a href="signup.php">Sign Up</a></li>
-                        <li><a href="login.php">Log In</a></li>
+                        <li class="login"><a href="login.php">Log In</a></li>
                         <?php
                     }
                     ?>
