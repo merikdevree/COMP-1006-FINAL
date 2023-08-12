@@ -43,6 +43,7 @@ class Login extends Database
             session_start();
             $_SESSION['user_id'] = $user[0]['user_id'];
             $_SESSION['username'] = $user[0]['username'];
+            header("Location: ../index.php?error=none");
         }
     }
 
