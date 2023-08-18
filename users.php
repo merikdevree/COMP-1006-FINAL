@@ -1,30 +1,34 @@
-<?php include 'includes/header.php';
+<?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
+include 'includes/header.php';
+//send to login page if not logged in
+if (!isset($_SESSION["username"])) {
     header("Location: login.php");
     exit();
-} else {
-    include "classes/view-users.class.php";
-    $viewUsers = new ViewUsers();
-    $users = $viewUsers->getUsers();
 }
 ?>
 <main>
-    <table>
-        <tr>
-            <th>User Id</th>
+    <h1>Users</h1>
+    <div class="table-wrapper">
+        <table>
+            <th>ID</th>
             <th>Username</th>
-            <th>Email</th>
             <th>Password</th>
-        </tr>
-        <?php foreach ($users as $user) {
-            echo '<tr 
-                        <td>' . $user['user_id'] . '</td>
-                        <td>' . $user['username'] . '</td>
-                        <td>' . $user['email'] . '</td>
-                        <td>' . $user['password'] . '</td>
-                    </tr>';
-        } ?>
-    </table>
+            <?php
+            // get users
+            include 'classes/view-users.class.php';
+            $viewUsers = new ViewUsers();
+            $users = $viewUsers->getAllUsers();
+            foreach ($users as $user) {
+                echo "<tr>";
+                echo "<td>" . $user["id"] . "</td>";
+                echo "<td>" . $user["username"] . "</td>";
+                echo "<td>" . $user["password"] . "</td>";
+                echo "</tr>";
+            }
+            ?>
+        </table>
+    </div>
 </main>
+
 <?php include 'includes/footer.php'; ?>

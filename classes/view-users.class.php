@@ -2,15 +2,17 @@
 
 class ViewUsers extends Database
 {
-    public function getUsers()
+    // get all users from the database
+    protected function getAllUsers()
     {
-        $stmt = $this->connect()->prepare("SELECT * FROM users;");
+        $stmt = $this->connect()->prepare("SELECT * FROM users");
+
         if (!$stmt->execute()) {
             $stmt = null;
             header("Location: ../users.php?error=stmtfailed");
             exit();
         }
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll();
         $stmt = null;
         return $result;
     }
